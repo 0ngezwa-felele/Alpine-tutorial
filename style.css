@@ -1,12 +1,102 @@
-body{
-    margin: 10%;
-    background-color: aqua;
+body {
+    margin:5%;
+    background-color:pink;
 }
-.container{
-    align-content: center;
-    /* padding-top: 2em; */
+.heading h1{
+    margin: auto;
+}
+.container1 {
+    margin-right: 2%;
+    margin-bottom: 2%;
     text-align: center;
+    width: 30%;
     border-radius: 25px;
-    background-color: #C17C74; 
+    background-color: #C17C74;
     padding: 1em;
+}
+.container2 {
+    margin-right: 2%;
+    margin-bottom: 2%; 
+    text-align: center;
+    width: 30%;
+    border-radius: 25px;
+    background-color: #C17C74;
+    padding: 1em;
+}
+.widget1{
+    display: flex;
+}
+.container3{
+    margin-right: 2%;
+    margin-bottom: 2%; 
+    text-align: center;
+    width: 30%;
+    border-radius: 25px;
+    background-color: #C17C74;
+    padding: 1em;
+}
+.container4{
+    margin-right: 2%;
+    margin-bottom: 2%; 
+    text-align: center;
+    width: 30%;
+    border-radius: 25px;
+    background-color: #C17C74;
+    padding: 1em;
+}
+.widget2{
+    display: flex;
+    margin: auto;
+}
+.container5{
+    margin-right: 2%;
+    margin-bottom: 2%; 
+    text-align: center;
+    width: 30%;
+    border-radius: 25px;
+    background-color: #C17C74;
+    padding: 1em;
+}
+.container6{
+    margin-right: 2%;
+    margin-bottom: 2%; 
+    text-align: center;
+    width: 30%;
+    border-radius: 25px;
+    background-color: #C17C74;
+    padding: 1em;
+}
+.widget3{
+    display: flex;
+}
+.container7{
+    margin-right: 2%;
+    margin-bottom: 2%; 
+    text-align: center;
+    width: 30%;
+    border-radius: 25px;
+    background-color: #C17C74;
+    padding: 1em; 
+}
+.container8{
+    margin-right: 2%;
+    margin-bottom: 2%; 
+    text-align: center;
+    width: 30%;
+    border-radius: 25px;
+    background-color: #C17C74;
+    padding: 1em;
+}
+.container9{
+    margin-right: 2%;
+    width: 30%;
+    border-radius: 25px;
+    background-color: #C17C74;
+    padding: 1em;
+}
+.widget4{
+    display: flex;
+}
+.widget5{
+    align-content: center;
 }

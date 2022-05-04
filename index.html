@@ -9,61 +9,130 @@
 </head>
 
 <body>
-    <div class="container">
+    <h1 class="heading">AlpineJS Tutorial</h1>
+    <div class="widget1">
+
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
 
         <div x-data="{}">
 
         </div>
-        <h1>Alpine Directives</h1>
-        <div x-data="{ title: 'First Alpine Project' }">
-            <p x-text="title"></p>
-            <button x-on:click="title='Alpine is amazing!!'">click me</button>
+
+
+        <div class="container1">
+            <h2>Creating a component</h2>
+            <h4>Creating the first Alpine component by addingthe x-data attribute to any element</h4>
+            <div x-data="{ title: 'My Name is Ongezwa' }">
+                <p x-text="title"></p>
+                <button x-on:click="title='A!!'">click me</button>
+            </div>
         </div>
-        <div x-data="{ count: 1 }">
-            <p x-text="count"></p>
-            <button @click="count++">Count Up</button>
-            <button @click="count--">Count Down</button>
-        </div>
-        <div x-data="{ countdown: 60 }" x-init="setInterval(function(){
-                countdown--;
-             }, 1000);
-             ">
-            <h1 x-text="countdown"></h1>
-        </div>
-        <div x-data="{ show: false }">
-            <button @click="show=!show">Show</button>
-            <div x-show="show">Hello</div>
-        </div>
-        <div x-data="{ title: 'AlpineJS is Awesome' }">
-            <p x-text="title"></p>
-            <input type="text" x-model="title">
-        </div>
-        <div x-data="{ code: '<p>Dynamic Paragraph</p>' }">
-            <div x-html="code"></div>
-        </div>
-        <div x-data="{ code: '<p>Dynamic Paragraph</p>' }">
-            <div x-ref="sentence">I am a sentence</div>
-            <button @click="$refs.sentence.innerText = 'I just changed'">Change Sentence</button>
-        </div>
-        <div x-data="{ socks: 'blue' }">
-            <template x-if="socks=='blue'">
-                <p>My socks are blue</p>
-            </template>
-            <template x-if="socks=='green'">
-                <p>My socks are green</p>
-            </template>
-            <button @click="socks = 'green'">Change Sox</button>
-        </div>
-        <div x-data="{ groceries: ['Milk', 'Eggs', 'Cheese'] }">
-            <p>Groceries</p>
-            <ul>
-                <template x-for="item in groceries">
-                    <li x-text="item"></li>
-                </template>
-            </ul>
+
+        <div class="container2">
+            <h2>Click Events</h2>
+            <h4>Creating a counter element by declaring count variable and adding two buttons that
+                 increase and decreases the counter with the use of x-text and @click 
+                 for the eventlistener</h4>
+            <div x-data="{ count: 1 }">
+                <p x-text="count"></p>
+                <button @click="count++">Count Up</button>
+                <button @click="count--">Count Down</button>
+            </div>
         </div>
     </div>
+
+
+
+    <div class="widget2">
+        <div class="container3">
+            <h2>Counter Component(x-init)</h2>
+            <h4>The directive allows running of some JS code when a component is ready and initialized</h4>
+            <div x-data="{ countdown: 10 }" x-init="setInterval(function(){
+                if(countdown !== 0){
+                    countdown--;
+                }else{
+                    countdown = 0;
+                }
+                
+             }, 1000);
+             ">
+                <h1 x-text="countdown"></h1>
+                <button @click = "countdown = 60">Reset</button>
+
+            </div>
+        </div>
+
+        <div class="container4">
+            <h2>AlpineJS x-show directive</h2>
+            <h4>Hidding or showing an element optionally, also adding a simple transition to the element visibility</h4>
+            <div x-data="{ show: false }">
+                <button @click="show=!show">Show</button>
+                <div x-show="show">Hello</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="widget3">
+        <div class="container5">
+            <h2>AlpineJS x-model</h2>
+            <h4>Directive that allows binding of a variable to form element such as textbox</h4>
+            <div x-data="{ title: 'AlpineJS is Awesome' }">
+                <p x-text="title"></p>
+                <input type="text" x-model="title">
+            </div>
+        </div>
+        <div class="container6">
+            <h2>AlpineJS x-html</h2>
+            <h4>Adding some dynamic HTML inside of any element</h4>
+            <div x-data="{ code: '<p>Dynamic Paragraph</p>' }">
+                <div x-html="code"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget4">
+        <div class="container7">
+            <h2>AlpineJS x-ref</h2>
+            <h4>The directive that allows referencing ofof any element with a specified name</h4>
+            <div x-data="{ code: '<p>Dynamic Paragraph</p>' }">
+                <div x-ref="sentence">I am a sentence</div>
+                <button @click="$refs.sentence.innerText = 'I just changed'">Change Sentence</button>
+            </div>
+        </div>
+        <div class="container8">
+            <h2>AlpineJS x-if</h2>
+            <h4>Showing and hiding of elements based on conditional</h4>
+            <div x-data="{ socks: 'blue' }">
+                <template x-if="socks=='blue'">
+                    <p>My socks are blue</p>
+                </template>
+                <template x-if="socks=='green'">
+                    <p>My socks are green</p>
+                </template>
+                <button @click="socks = 'green'">Change Socks</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="widget5">
+        <div class="container9">
+            <h2>AlpineJS x-for</h2>
+            <h4>Looping through an array of items</h4>
+            <div x-data="{ groceries: ['Milk', 'Eggs', 'Cheese'] }">
+                <p>Groceries</p>
+                <ul>
+                    <template x-for="item in groceries">
+                        <li x-text="item"></li>
+                    </template>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
 </body>
 
 </html>
